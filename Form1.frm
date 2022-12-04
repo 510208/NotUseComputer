@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form Form1 
    Appearance      =   0  '平面
-   BackColor       =   &H00C0C0FF&
+   BackColor       =   &H00FFFFFF&
    BorderStyle     =   0  '沒有框線
    Caption         =   "Form1"
    ClientHeight    =   13860
@@ -11,6 +11,7 @@ Begin VB.Form Form1
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+   Picture         =   "Form1.frx":0000
    ScaleHeight     =   13860
    ScaleWidth      =   23670
    ShowInTaskbar   =   0   'False
@@ -28,10 +29,10 @@ Begin VB.Form Form1
       EndProperty
       Height          =   495
       IMEMode         =   3  '暫止
-      Left            =   3960
+      Left            =   12360
       PasswordChar    =   "*"
-      TabIndex        =   2
-      Top             =   1800
+      TabIndex        =   1
+      Top             =   8040
       Width           =   3495
    End
    Begin VB.CommandButton Command1 
@@ -39,32 +40,45 @@ Begin VB.Form Form1
       BackColor       =   &H8000000B&
       Caption         =   "解鎖電腦(&O)"
       Height          =   495
-      Left            =   7560
+      Left            =   15960
       TabIndex        =   0
-      Top             =   1800
+      Top             =   8040
       Width           =   3015
    End
-   Begin VB.Label Label3 
+   Begin VB.Label Label1 
+      Alignment       =   1  '靠右對齊
       Appearance      =   0  '平面
       BackColor       =   &H80000005&
       ForeColor       =   &H80000008&
       Height          =   255
-      Left            =   120
-      TabIndex        =   4
-      Top             =   2400
-      Width           =   4575
+      Left            =   22320
+      TabIndex        =   5
+      Top             =   13440
+      Width           =   1215
    End
-   Begin VB.Image Image1 
-      Appearance      =   0  '平面
-      Height          =   5400
-      Left            =   10560
-      Picture         =   "Form1.frx":0000
+   Begin VB.Label lblVersion 
+      Alignment       =   1  '靠右對齊
+      Height          =   255
+      Left            =   0
+      TabIndex        =   4
       Top             =   0
-      Width           =   5400
+      Width           =   1215
+   End
+   Begin VB.Label Label3 
+      Appearance      =   0  '平面
+      BackColor       =   &H80000005&
+      BackStyle       =   0  '透明
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Left            =   8520
+      TabIndex        =   3
+      Top             =   8640
+      Width           =   4575
    End
    Begin VB.Label Label2 
       Appearance      =   0  '平面
       BackColor       =   &H80000005&
+      BackStyle       =   0  '透明
       Caption         =   "輸入密碼(&P)："
       BeginProperty Font 
          Name            =   "微軟正黑體"
@@ -77,31 +91,10 @@ Begin VB.Form Form1
       EndProperty
       ForeColor       =   &H80000008&
       Height          =   495
-      Left            =   120
-      TabIndex        =   3
-      Top             =   1800
+      Left            =   8520
+      TabIndex        =   2
+      Top             =   8040
       Width           =   3735
-   End
-   Begin VB.Label Label1 
-      Appearance      =   0  '平面
-      BackColor       =   &H80000005&
-      BackStyle       =   0  '透明
-      Caption         =   "輸入密碼以解鎖此電腦！"
-      BeginProperty Font 
-         Name            =   "微軟正黑體"
-         Size            =   36
-         Charset         =   136
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   -1  'True
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H000000FF&
-      Height          =   855
-      Left            =   120
-      TabIndex        =   1
-      Top             =   120
-      Width           =   9855
    End
 End
 Attribute VB_Name = "Form1"
@@ -122,6 +115,6 @@ End If
 End Sub
 
 Private Sub Form_Load()
-testchisu = 3
+lblVersion.Caption = "版本 " & App.Major & "." & App.Minor & "." & App.Revision
 End Sub
 
