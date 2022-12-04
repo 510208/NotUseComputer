@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin VB.Form Form1 
+Begin VB.Form lock 
    Appearance      =   0  '平面
    BackColor       =   &H00FFFFFF&
    BorderStyle     =   0  '沒有框線
@@ -67,13 +67,13 @@ Begin VB.Form Form1
    Begin VB.Label Label3 
       Appearance      =   0  '平面
       BackColor       =   &H80000005&
-      BackStyle       =   0  '透明
+      BorderStyle     =   1  '單線固定
       ForeColor       =   &H80000008&
-      Height          =   255
+      Height          =   1215
       Left            =   8520
       TabIndex        =   3
       Top             =   8640
-      Width           =   4575
+      Width           =   10455
    End
    Begin VB.Label Label2 
       Appearance      =   0  '平面
@@ -97,12 +97,11 @@ Begin VB.Form Form1
       Width           =   3735
    End
 End
-Attribute VB_Name = "Form1"
+Attribute VB_Name = "lock"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Dim testchisu As Long
 
 Private Sub Command1_Click()
 If Text1.Text = "510208" Then
@@ -110,11 +109,18 @@ If Text1.Text = "510208" Then
     End
 Else
     MsgBox "密碼錯誤", 16
-    Label3.Caption = "密碼提示：網名"
+    Label3.Caption = Form2.Text2.Text
+    Label3.Visible = True
 End If
 End Sub
 
 Private Sub Form_Load()
+Label3.Visible = False
 lblVersion.Caption = "版本 " & App.Major & "." & App.Minor & "." & App.Revision
 End Sub
 
+Private Sub Text1_KeyPress(KeyAscii As Integer)
+If KeyAscii = 13 Then
+    Call Command1_Click
+End If
+End Sub
