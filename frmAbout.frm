@@ -5,7 +5,7 @@ Begin VB.Form frmAbout
    ClientHeight    =   4935
    ClientLeft      =   2340
    ClientTop       =   1935
-   ClientWidth     =   6210
+   ClientWidth     =   5745
    ClipControls    =   0   'False
    LinkTopic       =   "Form2"
    MaxButton       =   0   'False
@@ -13,14 +13,25 @@ Begin VB.Form frmAbout
    Picture         =   "frmAbout.frx":0000
    ScaleHeight     =   3406.225
    ScaleMode       =   0  '使用者自訂
-   ScaleWidth      =   5831.511
+   ScaleWidth      =   5394.852
    ShowInTaskbar   =   0   'False
+   Begin VB.TextBox Text1 
+      Height          =   1455
+      Left            =   1080
+      Locked          =   -1  'True
+      MultiLine       =   -1  'True
+      ScrollBars      =   3  '兩者皆有
+      TabIndex        =   9
+      Text            =   "frmAbout.frx":4959
+      Top             =   2280
+      Width           =   4575
+   End
    Begin VB.PictureBox picIcon 
       AutoSize        =   -1  'True
       ClipControls    =   0   'False
       Height          =   540
       Left            =   240
-      Picture         =   "frmAbout.frx":4959
+      Picture         =   "frmAbout.frx":BE85
       ScaleHeight     =   337.12
       ScaleMode       =   0  '使用者自訂
       ScaleWidth      =   337.12
@@ -35,7 +46,7 @@ Begin VB.Form frmAbout
       Height          =   345
       Left            =   4245
       TabIndex        =   0
-      Top             =   2625
+      Top             =   4065
       Width           =   1260
    End
    Begin VB.CommandButton cmdSysInfo 
@@ -43,8 +54,17 @@ Begin VB.Form frmAbout
       Height          =   345
       Left            =   4260
       TabIndex        =   2
-      Top             =   3075
+      Top             =   4515
       Width           =   1245
+   End
+   Begin VB.Label Label2 
+      BackStyle       =   0  '透明
+      Caption         =   "授權資訊(&S)："
+      Height          =   375
+      Left            =   1050
+      TabIndex        =   8
+      Top             =   2040
+      Width           =   1335
    End
    Begin VB.Label Label1 
       BackStyle       =   0  '透明
@@ -61,8 +81,8 @@ Begin VB.Form frmAbout
       Index           =   1
       X1              =   84.515
       X2              =   5309.398
-      Y1              =   1687.583
-      Y2              =   1687.583
+      Y1              =   2681.496
+      Y2              =   2681.496
    End
    Begin VB.Label lblDescription 
       BackStyle       =   0  '透明
@@ -90,8 +110,8 @@ Begin VB.Form frmAbout
       Index           =   0
       X1              =   98.6
       X2              =   5309.398
-      Y1              =   1697.936
-      Y2              =   1697.936
+      Y1              =   2691.85
+      Y2              =   2691.85
    End
    Begin VB.Label lblVersion 
       BackStyle       =   0  '透明
@@ -109,7 +129,7 @@ Begin VB.Form frmAbout
       Height          =   825
       Left            =   255
       TabIndex        =   4
-      Top             =   2625
+      Top             =   4065
       Width           =   3870
    End
 End
@@ -246,6 +266,3 @@ GetKeyError:      ' 錯誤發生後清除...
     rc = RegCloseKey(hKey)                                  ' 關閉註冊機碼
 End Function
 
-Private Sub Label1_Click()
-
-End Sub
