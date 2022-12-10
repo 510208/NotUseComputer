@@ -92,3 +92,5 @@ ___
 
 我忘記設定了，反正此軟體的授權我是用GNU License v3.0，詳見軟體內或
 [GNU License v3.0](https://www.gnu.org/licenses/gpl-3.0.zh-tw.html)
+
+[中文版GNU License v3.0](/LICENSE_ZH.md)
