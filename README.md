@@ -21,6 +21,7 @@ ___
 [![GitHub stars](https://img.shields.io/github/stars/510208/NotUseComputer?color=brightgreen&style=for-the-badge)](https://github.com/510208/NotUseComputer/)
 [![](https://img.shields.io/badge/Blog-510208's%20Blog-brightgreen?style=for-the-badge&logo=appveyor)](https://sam0616.pixnet.net)
 [![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=for-the-badge&logo=appveyor)]
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X4CZE3V)
 
 ____
 
